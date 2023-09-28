@@ -24,8 +24,8 @@ spec:
         imagePullSecrets:
           - name: my-secret
         containers:
-        - name: kfserving-container
-          image: "docker.io/abhinavpanthri/9145e5924f0f3c8523cf3fcd1bcd0010acf3ac6d9387a21d4958c0e65ab975b8"
+        - name: kfserving-container          
+          image: "docker.io/abhinavpanthri/nrf_docker_image"
           ports:
             - containerPort: 9001
               protocol: TCP
