@@ -1,14 +1,14 @@
 apiVersion: ai.sap.com/v1alpha1
 kind: ServingTemplate
 metadata:
-  name: tf-text-clf-serve
+  name: tf-txt-clf-model
   annotations:
     scenarios.ai.sap.com/description: "Tensorlfow text classification"
     scenarios.ai.sap.com/name: "movie-review-clf"
     executables.ai.sap.com/description: "Tensorlfow GPU Serving executable"
     executables.ai.sap.com/name: "serve-exectuable"
   labels:
-    scenarios.ai.sap.com/id: "tf-text-clf"
+    scenarios.ai.sap.com/id: "learning-code"
     ai.sap.com/version: "1.0.0"
 spec:
   inputs:
