@@ -8,7 +8,7 @@ metadata:
     executables.ai.sap.com/description: "Tensorlfow GPU Serving executable"
     executables.ai.sap.com/name: "serve-exectuable"
   labels:
-    scenarios.ai.sap.com/id: "learning-code"
+    scenarios.ai.sap.com/id: "tf-text-clf"
     ai.sap.com/version: "1.0.0"
 spec:
   inputs:
@@ -22,10 +22,10 @@ spec:
     spec: |
       predictor:
         imagePullSecrets:
-          - name: my-secret
+          - name: my-secret-docker
         containers:
-        - name: kfserving-container          
-          image: "docker.io/abhinavpanthri/nrf_docker_image"
+        - name: kfserving-container
+          image: "docker.io/abhinavpanthri/movie-review-clf-serve:0.0.1"
           ports:
             - containerPort: 9001
               protocol: TCP
